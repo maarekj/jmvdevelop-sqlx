@@ -1,0 +1,47 @@
+{
+  "name": "jmvdevelop/sqlx",
+  "description": "",
+  "authors": [
+    {
+      "name": "Joseph Maarek",
+      "email": "josephmaarek@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "JmvDevelop\\Sqlx\\": "src"
+    },
+    "files": [
+      "src/Utils/functions.php"
+    ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "JmvDevelop\\Sqlx\\Tests\\": "tests",
+      "JmvDevelop\\Sqlx\\Examples\\": "examples"
+    }
+  },
+  "require-dev": {
+    "ext-mysqli": "*",
+    "phpstan/phpstan": "^1.10",
+    "php-standard-library/phpstan-extension": "^1.0",
+    "phpunit/phpunit": "^10",
+    "spatie/phpunit-snapshot-assertions": "^5.0"
+  },
+  "require": {
+    "php": "^8.2",
+    "symfony/console": "^4.0.0|^5.2|^6.0",
+    "symfony/finder": "^4.0.0|^5.2|^6.0",
+    "azjezz/psl": "^2.6",
+    "league/flysystem-memory": "^3.15",
+    "league/flysystem": "^3.15",
+    "nette/php-generator": "^4.0",
+    "doctrine/dbal": "^3.6",
+    "symfony/string": "^6.3",
+    "league/flysystem-path-prefixing": "^3.15",
+    "doctrine/collections": "^2.1"
+  },
+  "suggest": {
+    "ext-mysqli": "*"
+  }
+}

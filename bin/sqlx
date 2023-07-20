@@ -1,0 +1,24 @@
+#!/usr/bin/env php
+<?php
+
+use JmvDevelop\Sqlx\Cli\GenerateCommand;
+use Symfony\Component\Console\Application;
+
+
+$autoloadFiles = [
+    __DIR__ . '/../vendor/autoload.php',
+    __DIR__ . '/../../../autoload.php'
+];
+
+foreach ($autoloadFiles as $autoloadFile) {
+    if (file_exists($autoloadFile)) {
+        require_once $autoloadFile;
+        break;
+    }
+}
+
+$application = new Application();
+
+$application->add(new GenerateCommand("generate"));
+
+$application->run();
